@@ -1,0 +1,31 @@
+diff -dur -x '*~' lcr.orig/Makefile.am lcr/Makefile.am
+--- lcr.orig/Makefile.am	2009-06-10 21:31:03.000000000 +0200
++++ lcr/Makefile.am	2009-06-15 14:56:48.000000000 +0200
+@@ -20,22 +20,15 @@
+ ##    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+ ##    Boston, MA 02110-1301, USA.
+ 
+-INSTALLdir = $(DESTDIR)/usr/local/lcr
+-
+ pkglogdir=$(localstatedir)/log/@PACKAGE@
+ pkgsysconfdir=$(sysconfdir)/@PACKAGE@
+ 
+-#CONFIGdir=$(DESTDIR)$(pkgsysconfdir)
+-#SHAREdir=$(DESTDIR)$(pkgdatadir)
+-#LOGdir=$(DESTDIR)$(pkglogdir)
+-#EXTENSIONdir=$(DESTDIR)$(localstatedir)/lib/lcr
+-
+-CONFIGdir=$(INSTALLdir)
+-SHAREdir=$(INSTALLdir)
+-LOGdir=$(INSTALLdir)
+-EXTENSIONdir=$(INSTALLdir)/extensions
++CONFIGdir=$(DESTDIR)$(pkgsysconfdir)
++SHAREdir=$(DESTDIR)$(pkgdatadir)
++LOGdir=$(DESTDIR)$(pkglogdir)
++EXTENSIONdir=$(DESTDIR)$(localstatedir)/lib/lcr
+ 
+-astmoddir = $(DESTDIR)/usr/lib/asterisk/modules
++astmoddir = $(DESTDIR)$(libdir)/asterisk/modules
+ 
+ INSTALLATION_DEFINES = \
+  -DCONFIG_DATA="\"$(CONFIGdir)\"" \

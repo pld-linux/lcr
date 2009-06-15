@@ -1,0 +1,4 @@
+# Customized settings for lcr
+
+# Define nice level for lcr
+#SERVICE_RUN_NICE_LEVEL="+0"

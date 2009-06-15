@@ -1,0 +1,24 @@
+diff -dur lcr.orig/lcradmin.c lcr/lcradmin.c
+--- lcr.orig/lcradmin.c	2009-05-08 11:19:47.000000000 +0200
++++ lcr/lcradmin.c	2009-06-15 14:43:24.000000000 +0200
+@@ -21,7 +21,7 @@
+ #include <sys/un.h>
+ #include <sys/time.h>
+ #include <errno.h>
+-#include <curses.h>
++#include <ncurses/curses.h>
+ #include "macro.h"
+ #include "options.h"
+ #include "join.h"
+diff -dur lcr.orig/socket_server.c lcr/socket_server.c
+--- lcr.orig/socket_server.c	2009-04-05 11:40:18.000000000 +0200
++++ lcr/socket_server.c	2009-06-15 14:43:36.000000000 +0200
+@@ -12,7 +12,7 @@
+ #include "main.h"
+ #include <sys/socket.h>
+ #include <sys/un.h>
+-#include <curses.h>
++#include <ncurses/curses.h>
+ 
+ 
+ char socket_name[128];
