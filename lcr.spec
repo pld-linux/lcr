@@ -7,31 +7,31 @@ Version:	1.5
 Release:	0.%{_snap}.1
 License:	GPL v2+
 Group:		Applications/System
-Source0:	http://www.linux-call-router.de/download/lcr-1.5/lcr_%{_snap}.tar.gz
+Source0:	http://www.linux-call-router.de/download/lcr-1.5/%{name}_%{_snap}.tar.gz
 # Source0-md5:	84eabeba617c578f89c33e1aadd59d03
 Source1:	%{name}.sysconfig
 Source2:	%{name}.init
 Patch0:		%{name}-ncurses.patch
 Patch1:		%{name}-dirs.patch
 URL:		http://www.linux-call-router.de/
-BuildRequires:	rpmbuild(macros) >= 1.228
-Requires(post,preun):	/sbin/chkconfig
 BuildRequires:	asterisk-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	mISDNuser-devel >= 2.0
 BuildRequires:	ncurses-devel
+BuildRequires:	rpmbuild(macros) >= 1.228
+Requires(post,preun):	/sbin/chkconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Formerly known as "PBX4Linux", Linux-Call-Router is not only a router, it is a
-real ISDN PBX which interconnects ISDN telephones and ISDN lines. It is
-possible to connect telephones to a Linux box. It is a pure software solution
-except for the ISDN cards and telephones. The great benefit is the NT-mode that
-allows to connect telephones to an ISDN card. Special cards are needed and a
-little bit of different cabeling. It supports lots of features, that only
-expensive PBXs have. It include a channel driver that can link LCR to Asterisk
-PBX.
+Formerly known as "PBX4Linux", Linux-Call-Router is not only a router,
+it is a real ISDN PBX which interconnects ISDN telephones and ISDN
+lines. It is possible to connect telephones to a Linux box. It is a
+pure software solution except for the ISDN cards and telephones. The
+great benefit is the NT-mode that allows to connect telephones to an
+ISDN card. Special cards are needed and a little bit of different
+cabeling. It supports lots of features, that only expensive PBXs have.
+It include a channel driver that can link LCR to Asterisk PBX.
 
 %description -l pl.UTF-8
 
