@@ -47,6 +47,9 @@ chan_lcr turns LCR into an ISDN channel driver for Asterisk PBX.
 %patch1 -p1
 %patch2 -p1
 
+# cleanup backups after patching
+find '(' -name '*~' -o -name '*.orig' ')' -print0 | xargs -0 -r -l512 rm -f
+
 %build
 %{__aclocal}
 %{__autoconf}
