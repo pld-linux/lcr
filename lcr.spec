@@ -34,8 +34,6 @@ ISDN card. Special cards are needed and a little bit of different
 cabeling. It supports lots of features, that only expensive PBXs have.
 It include a channel driver that can link LCR to Asterisk PBX.
 
-%description -l pl.UTF-8
-
 %package -n asterisk-chan_lcr
 Summary:	Linux-Call-Router channel for Asterisk
 Group:		Applications/System
