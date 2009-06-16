@@ -1,0 +1,22 @@
+diff -dur -x '*~' lcr.orig/bchannel.c lcr/bchannel.c
+--- lcr.orig/bchannel.c	2009-06-06 23:42:04.000000000 +0200
++++ lcr/bchannel.c	2009-06-16 12:13:51.000000000 +0200
+@@ -26,7 +26,6 @@
+ #include <mISDNif.h>
+ 
+ #define AF_COMPATIBILITY_FUNC 1
+-#define MISDN_OLD_AF_COMPATIBILITY 1
+ #include <compat_af_isdn.h>
+ 
+ #define HAVE_ATTRIBUTE_always_inline 1
+diff -dur -x '*~' lcr.orig/mISDN.cpp lcr/mISDN.cpp
+--- lcr.orig/mISDN.cpp	2009-05-14 20:01:46.000000000 +0200
++++ lcr/mISDN.cpp	2009-06-16 12:14:04.000000000 +0200
+@@ -13,7 +13,6 @@
+ #include "myisdn.h"
+ 
+ extern "C" {
+-#define MISDN_OLD_AF_COMPATIBILITY 1
+ #include <compat_af_isdn.h>
+ }
+ #include <q931.h>

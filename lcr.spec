@@ -13,6 +13,7 @@ Source1:	%{name}.sysconfig
 Source2:	%{name}.init
 Patch0:		%{name}-ncurses.patch
 Patch1:		%{name}-dirs.patch
+Patch2:		%{name}-no_compat.patch
 URL:		http://www.linux-call-router.de/
 BuildRequires:	asterisk-devel
 BuildRequires:	autoconf
@@ -46,6 +47,7 @@ chan_lcr turns LCR into an ISDN channel driver for Asterisk PBX.
 %setup -q -n %{name}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__aclocal}
